@@ -78,6 +78,7 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $reviews = $product->reviews()->get();
+
         return view('products.show', compact('product', 'reviews'));
     }
 

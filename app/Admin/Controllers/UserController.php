@@ -44,7 +44,7 @@ class UserController extends AdminController
             $filter->like('address', '住所');
             $filter->like('phone', '電話番号');
             $filter->between('created_at', '登録日')->datetime();
-            $filter->scope('trashed', 'Soft deleted data')->onlyTrashed();
+            $filter->scope('    ', 'Soft deleted data')->onlyTrashed();
         });
 
 

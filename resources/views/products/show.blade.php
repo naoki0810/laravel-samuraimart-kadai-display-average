@@ -15,6 +15,9 @@
         <h1 class="">
           {{ $product->name }}
         </h1>
+        {{-- ここに星評価を記述 --}}
+        <p><span class="samuraimart-star-rating" data-rate="{{round($product->reviews->avg('score') * 2) / 2}}"></span>{{round($product->reviews->avg('score') * 2, 1) / 2}}</p>    
+                
         <p class="">
           {{ $product->description }}
         </p>
@@ -74,6 +77,8 @@
     <div class="offset-1 col-11">
       <hr class="w-100">
       <h3 class="float-left">カスタマーレビュー</h3>
+      {{-- ここに星評価を記述 --}}
+      <p><span class="samuraimart-star-rating" data-rate="{{round($product->reviews->avg('score') * 2) / 2}}"></span>{{round($product->reviews->avg('score') * 2, 1) / 2}}</p>    
     </div>
 
     <div class="offset-1 col-10">

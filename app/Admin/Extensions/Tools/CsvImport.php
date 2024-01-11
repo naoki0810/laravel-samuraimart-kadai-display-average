@@ -9,7 +9,7 @@ class CsvImport extends AbstractTool
 {
   protected function script()
   {
-    return <<< SCRIPT 
+    return <<< SCRIPT
 
     $('.csv-import').click(function() {
       var select = document.getElementById('files');
